@@ -1,0 +1,211 @@
+﻿@model OrderModel
+@{
+    Layout = "_Layout";
+}
+<html lang="en" dir="ltr">
+<head>
+    <link rel="stylesheet" href="/css/customV2.css">
+    <link rel="stylesheet" href="/css/footerV3.css">
+    <script src="minified/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"
+            integrity="sha256-CkQcTxuQyZLqzqWqntH3FDxeDKMV0m7cw0aM5eph4Do=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+</head>
+<body>
+    <section class="first-section">
+        <h1 class="text-white">შ ე ქ მ ე ნ ი  შ ე ნ ი<br />პ ი ც ა</h1>
+        <div class="images-wrapper">
+            <img class="section_1_bg" src="/images/CustomPage/1.png" />
+            <div class="ingredient-images">
+                <img class="section_1_01" src="/images/CustomPage/2.png" />
+
+                <img class="section_1_02" src="/images/CustomPage/3.png" />
+
+                <img class="section_1_03" src="/images/CustomPage/4.png" />
+
+                <img class="section_1_04" src="/images/CustomPage/5.png" />
+
+                <img class="section_1_05" src="/images/CustomPage/6.png" />
+
+                <img class="section_1_06" src="/images/CustomPage/7.png" />
+
+                <img class="section_1_07" src="/images/CustomPage/8.png" />
+
+                <img class="section_1_08" src="/images/CustomPage/9.png" />
+
+                <img class="section_1_09" src="/images/CustomPage/10.png" />
+            </div>
+        </div>
+    </section>
+
+
+    <section class="forth-section">
+        <h1 class="text-white">Unleash Your Pizza Creativity</h1>
+        <p class="text-white">Customize your pizza with your favorite ingredients and bring your unique recipe to life</p>
+        <div class="images-wrapper">
+            <img class="section_4_01" src="/images/CustomPage/pizza/1.png" height="700" />
+            <img class="section_4_02" src="/images/CustomPage/pizza/2.png" height="700" />
+            <img class="section_4_03" src="/images/CustomPage/pizza/3.png" height="700" />
+            <img class="section_4_04" src="/images/CustomPage/pizza/4.png" height="700" />
+        </div>
+    </section>
+
+    <script src="/js/customBUG.js"></script>
+
+    <form method="post" action="@Url.Action("Create", "Custom")">
+        <div style="display: flex; justify-content: center;">
+            <div class="container" style="background-color: rgba(255, 255, 255, 0.151); border-radius: 20px; box-shadow: 0 0 200px rgb(0, 0, 0);">
+                <div style="display: flex; align-items: flex-start;">
+                    <video loop muted autoplay style="width: 600px; height: auto; margin-right: 20px; margin-top: 4%;margin-bottom: 4%; border-radius: 20px;">
+                        <source src="/video/CustomPizzaVID.mp4" type="video/mp4">
+                    </video>
+                    <div style="margin-left: 40px; flex-grow: 1;">
+                        <hr>
+                        <div class="btn-group btn-group-vertical" data-toggle="buttons">
+                            <label class="btn">
+                                <input asp-for="TomatoSauce" type="checkbox"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span>TomatoSauce(+1$)</span>
+                            </label>
+                            <label class="btn">
+                                <input asp-for="Ham" type="checkbox"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span>Ham(+2$)</span>
+                            </label>
+                            <label class="btn">
+                                <input asp-for="Pepperoni" type="checkbox"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span>Pepperoni(+3$)</span>
+                            </label>
+                            <label class="btn">
+                                <input asp-for="Mushrooms" type="checkbox"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span>Mushrooms(+1$)</span>
+                            </label>
+                            <label class="btn">
+                                <input asp-for="Olives" type="checkbox"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span>Olives(+2$)</span>
+                            </label>
+                            <label class="btn">
+                                <input asp-for="Bacon" type="checkbox"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span>Bacon(+1$)</span>
+                            </label>
+                        </div>
+                        <div class="btn-group btn-group-vertical" data-toggle="buttons">
+                            <label class="btn">
+                                <input asp-for="Onions" type="checkbox"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span>Onions(+1$)</span>
+                            </label>
+                            <label class="btn">
+                                <input asp-for="GreenPeppers" type="checkbox"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span>GreenPeppers(+3$)</span>
+                            </label>
+                            <label class="btn">
+                                <input asp-for="Pineapple" type="checkbox"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span>Pineapple(+2$)</span>
+                            </label>
+                            <label class="btn">
+                                <input asp-for="Jalapenos" type="checkbox"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span>Jalapenos(+1$)</span>
+                            </label>
+                            <label class="btn">
+                                <input asp-for="Anchovies" type="checkbox"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span>Anchovies(+1$)</span>
+                            </label>
+                        </div>
+                        <label for="cheese-select" style="color:white; margin-left: 60px;font-size: 2rem;margin-top: 10px;">Choose Cheese:</label>
+                        <select id="cheese-select" name="cheesetype">
+                            <option value="none">არა</option>
+                            <option value="cheddar">Cheddar</option>
+                            <option value="mozzarella">Mozzarella</option>
+                            <option value="swiss">Swiss</option>
+                            <option value="gouda">Gouda</option>
+                            <option value="blue">Blue Cheese</option>
+                            <option value="parmesan">Parmesan</option>
+                            <option value="provolone">Provolone</option>
+                            <option value="burrata">Burrata</option>
+                            <option value="sulguni">sulguni</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <button type="submit">
+            შეკვეთა
+        </button>
+
+    </form>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+    
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+
+            <IMG SRC="/images/Logo/LogoFooter.png" ALT="" WIDTH=150 HEIGHT=100>
+
+            <p class="footer-links">
+                <a href="@Url.Action("Home", "Index")">Home</a> ·
+                <a href="#">About</a> ·
+                <a href="#">Pricing</a> ·
+                <a href="#">Faq</a> ·
+                <a href="#">Contact</a> ·
+            </p>
+
+            <p class="footer-company-name">OPIZZA &copy; 2023</p>
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Tbilis,Georgia</span> ღმერთების ქალაქი</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+955 577 602 399</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:nika.kobaidze04@gmail.com">nika.kobaidze04@gmail.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>არწერა</span>
+                Georgia County Pizza is a local pizza company located in Georgia County, USA. They specialize in crafting delicious pizzas using fresh, locally sourced ingredients. With a diverse menu offering a variety of toppings and crust options, Georgia County Pizza is sure to satisfy every pizza lover's cravings. Their commitment to excellent customer service sets them apart, making them a favorite choice for residents and visitors alike in Georgia County.
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="https://www.facebook.com/profile.php?id=100009152091053"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/nika16796240"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/nikoloz-kobaidze-298a35254/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/whosNikoloz"><i class="fab fa-github"></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+</html>

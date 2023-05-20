@@ -1,0 +1,138 @@
+﻿@model Pizza
+
+@{
+    Layout = "_Layout";
+}
+<html lang="en" dir="ltr">
+<head>
+    <link rel="stylesheet" href="/css/checkoutBUG.css">
+    <link rel="stylesheet" href="/css/footerV3.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+</head>
+<body>
+    
+    <div class="pizza-card" style="margin-bottom:200px;margin-top:50px;">
+        <div class="pizza-image">
+            @if (Model.Data != null && Model.Data.Length > 0)
+            {
+                string base64Image = Convert.ToBase64String(Model.Data);
+                string imageSource = string.Format("data:image/png;base64,{0}", base64Image);
+                <img src="@imageSource" />
+            }
+        </div>
+        <div class="pizza-details">
+            <h5 class="pizza-title">@Model.PizzaName</h5>
+            <ul class="pizza-ingredients">
+                @if (Model.TomatoSauce)
+                {
+                    <li>ტომატის სოუსი: კი</li>
+                }
+                @if (Model.Ham)
+                {
+                    <li>ლორი: კი</li>
+                }
+                @if (Model.Pepperoni)
+                {
+                    <li>პეპერონი: კი</li>
+                }
+                @if (Model.Mushrooms)
+                {
+                    <li>სოკო: კი</li>
+                }
+                @if (Model.Olives)
+                {
+                    <li>ზეთისხილი: კი</li>
+                }
+                <li>ყველი: @Model.CheeseType.ToString()</li>
+                @if (Model.Bacon)
+                {
+                    <li>ბეკონი: კი</li>
+                }
+                @if (Model.Onions)
+                {
+                    <li>ხახვი: კი</li>
+                }
+                @if (Model.GreenPeppers)
+                {
+                    <li>Მწვანე წიწაკა: კი</li>
+                }
+                @if (Model.Pineapple)
+                {
+                    <li>ანანასი: კი</li>
+                }
+                @if (Model.Jalapenos)
+                {
+                    <li>ჯალაპენოსი: კი</li>
+                }
+                @if (Model.Anchovies)
+                {
+                    <li>ანჩოუსები: კი</li>
+                }
+            </ul>
+            <p class="final-price">Საბოლოო ფასი: @Model.FinalPrice ₾</p>
+            <form action="/Order/Create" method="post">
+                <input type="hidden" name="id" value="@Model.Id" />
+                <button type="submit" class="order-button">შეკვეთის დადასტურება</button>
+                <button asp-action="EditPizzaBUG" asp-controller="Custom" class="order-button">Edit</button>
+            </form>
+        </div>
+    </div>
+   
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+
+            <IMG SRC="/images/Logo/LogoFooter.png" ALT="" WIDTH=150 HEIGHT=100>
+
+            <p class="footer-links">
+                <a href="@Url.Action("Home", "Index")">Home</a> ·
+                <a href="#">About</a> ·
+                <a href="#">Pricing</a> ·
+                <a href="#">Faq</a> ·
+                <a href="#">Contact</a> ·
+            </p>
+
+            <p class="footer-company-name">OPIZZA &copy; 2023</p>
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Tbilis,Georgia</span> ღმერთების ქალაქი</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+955 577 602 399</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:nika.kobaidze04@gmail.com">nika.kobaidze04@gmail.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>არწერა</span>
+                Georgia County Pizza is a local pizza company located in Georgia County, USA. They specialize in crafting delicious pizzas using fresh, locally sourced ingredients. With a diverse menu offering a variety of toppings and crust options, Georgia County Pizza is sure to satisfy every pizza lover's cravings. Their commitment to excellent customer service sets them apart, making them a favorite choice for residents and visitors alike in Georgia County.
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="https://www.facebook.com/profile.php?id=100009152091053"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/nika16796240"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/nikoloz-kobaidze-298a35254/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/whosNikoloz"><i class="fab fa-github"></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+</html>
