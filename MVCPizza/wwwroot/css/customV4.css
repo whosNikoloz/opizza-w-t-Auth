@@ -287,16 +287,19 @@ select {
     .forth-section {
         display: none;
     }
-    
 
-
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
     .scrollmagic-pin-spacer {
         display: none;
     }
 
     /* Center the form elements */
     .form-group {
-        text-align:justify-all;
+        text-align: justify-all;
+        max-width: 100%;
     }
 
     /* Adjust the checkbox layout */
