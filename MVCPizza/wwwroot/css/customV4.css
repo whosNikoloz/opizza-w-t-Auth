@@ -7,22 +7,25 @@ body {
     background-color: #003223 !important;
 }
 
-h1 {
+
+.CustomPizzaFontH1 {
+    font-family: "Franklin Gothic Medium";
     color: #ffffff;
-    font-size: 70px!important;
-    font-weight: lighter!important;
-    letter-spacing: -5px!important;
-    padding: 50px 0px 0px 0px!important;
-    z-index: 999!important;
-    position: absolute!important;
+    font-size: 70px;
+    font-weight: lighter;
+    letter-spacing: -5px;
+    padding: 50px 0px 0px 0px;
+    z-index: 999;
+    position: absolute;
 }
 
-p {
+.CustomPizzaFontp {
     color: #ffffff;
     font-size: 24px;
     font-weight: 100;
     z-index: 999;
 }
+
 
 .first-section {
     width: 100%;
@@ -122,6 +125,10 @@ p {
     overflow: hidden;
     height: 100%;
 }
+.form-group {
+    width: 500px;
+    height: auto;
+}
 
 .third-section {
     width: 100%;
@@ -166,74 +173,58 @@ p {
         }
 
 
-label.btn span {
-    font-size: 1.5em;
-}
-
-label input[type="checkbox"] ~ i.fa.fa-square-o {
-    color: #c8c8c8;
-    display: inline;
-}
-
-label input[type="checkbox"] ~ i.fa.fa-check-square-o {
+.checkbox {
     display: none;
 }
 
-label input[type="checkbox"]:checked ~ i.fa.fa-square-o {
-    display: none;
+.checkbox-wrapper {
+    display: inline-flex;
+    align-items:center;
+    margin-right: 10px;
 }
 
-label input[type="checkbox"]:checked ~ i.fa.fa-check-square-o {
-    color: #11e02d;
-    display: inline;
-}
-
-label:hover input[type="checkbox"] ~ i.fa {
-    color: #7AA3CC;
-}
-
-div[data-toggle="buttons"] label.active {
-    color: rgb(0, 255, 0);
-}
-
-div[data-toggle="buttons"] label {
-    display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 2em;
-    text-align: left;
-    white-space: nowrap;
-    vertical-align: top;
-    cursor: pointer;
-    background-color: none;
-    border-radius: 3px;
-    color: #ff0000;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-}
-
-    div[data-toggle="buttons"] label:hover {
-        color: #ffffff;
-    }
-
-    div[data-toggle="buttons"] label:active, div[data-toggle="buttons"] label.active {
-        -webkit-box-shadow: none;
-        box-shadow: none;
-    }
-
-
-
-select {
-    width: 130px;
-    padding: 8px;
+.checkmark {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
     border-radius: 10px;
-    border: none;
-    background-color: #f0f0f0;
+    position: relative;
+    transition: background-color 0.4s;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.checkbox:checked + .checkmark {
+    background-color: #08bb68;
+}
+
+.checkmark::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 10px;
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateZ(40deg) scale(10);
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+.checkbox:checked + .checkmark::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotateZ(40deg) scale(1);
+}
+
+.checkbox-text {
+    font-size:1.3em;
+    margin-left: 5px;
+    font-weight: bold;
+    color: #fff;
 }
 
 
@@ -262,3 +253,95 @@ button {
         transform: translateY(-7px);
     }
 
+
+select {
+    width: 25%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    box-sizing: border-box; /* Added box-sizing property */
+}
+
+
+.CustomVid {
+    width: 700px;
+    height: auto;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    border-radius: 30px;
+}
+
+.CustomLabel {
+    color: white;
+    font-size: 2.5rem;
+    margin-left: 500px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 600px) {
+    /* Hide the sections except the form */
+    .first-section,
+    .third-section,
+    .forth-section {
+        display: none;
+    }
+    
+
+
+    .scrollmagic-pin-spacer {
+        display: none;
+    }
+
+    /* Center the form elements */
+    .form-group {
+        text-align:justify-all;
+    }
+
+    /* Adjust the checkbox layout */
+    .checkbox-wrapper {
+        display: block;
+        margin-left:0;
+    }
+
+    /* Adjust the select layout */
+    #cheese-select {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .CustomVid {
+        width: 360px;
+        height: auto;
+        
+    }
+    button {
+        font-size: 18px !important;
+        padding: 0.4em 1.5em;
+        margin-bottom: -30px;
+    }
+
+    .checkmark {
+        width: 16px;
+        height: 16px;
+    }
+
+    .checkbox-text {
+        font-size: 0.9em;
+    }
+
+    .checkbox-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    .CustomLabel {
+        margin-left: 120px;
+    }
+
+}

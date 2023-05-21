@@ -4,7 +4,7 @@
 }
 <html lang="en" dir="ltr">
 <head>
-    <link rel="stylesheet" href="/css/customV2.css">
+    <link rel="stylesheet" href="/css/customV4.css">
     <link rel="stylesheet" href="/css/footerV3.css">
     <script src="minified/gsap.min.js"></script>
 
@@ -22,7 +22,7 @@
 </head>
 <body>
     <section class="first-section">
-        <h1 class="text-white">შ ე ქ მ ე ნ ი  შ ე ნ ი<br />პ ი ც ა</h1>
+        <h1 class="CustomPizzaFontH1">შექმენი  შენი<br />პიცა</h1>
         <div class="images-wrapper">
             <img class="section_1_bg" src="/images/CustomPage/1.png" />
             <div class="ingredient-images">
@@ -46,68 +46,99 @@
             </div>
         </div>
     </section>
-
-
-    <section class="forth-section">
-        <h1 class="text-white">Unleash Your Pizza Creativity</h1>
-        <p class="text-white">Customize your pizza with your favorite ingredients and bring your unique recipe to life</p>
+  
+    <section class="third-section">
+        <h1 class="CustomPizzaFontH1">Add Anything You Want</h1>
+        <p class="CustomPizzaFontp">Easily add animation to cheese, black olives, herbs & more.</p>
         <div class="images-wrapper">
-            <img class="section_4_01" src="/images/CustomPage/pizza/1.png" height="700" />
-            <img class="section_4_02" src="/images/CustomPage/pizza/2.png" height="700" />
-            <img class="section_4_03" src="/images/CustomPage/pizza/3.png" height="700" />
-            <img class="section_4_04" src="/images/CustomPage/pizza/4.png" height="700" />
+            <img class="section_3_06" src="/images/CustomPage/pizza/3.1.png" />
+            <img class="section_3_05" src="/images/CustomPage/pizza/3.2.png" />
+            <img class="section_3_04" src="/images/CustomPage/pizza/3.3.png" />
+            <img class="section_3_03" src="/images/CustomPage/pizza/3.4.png" />
+            <img class="section_3_02" src="/images/CustomPage/pizza/3.5.png" />
+            <img class="section_3_01" src="/images/CustomPage/pizza/3.6.png" />
         </div>
     </section>
-
+    <section class="forth-section">
+        <h1 class="CustomPizzaFontH1">14 Types of Pizzas</h1>
+        <p class="CustomPizzaFontp">With so many different ingredients and add-ons, the possibilities are endless.</p>
+        <div class="images-wrapper">
+            <img class="section_4_01" src="/images/CustomPage/pizza/1.png" height="600" />
+            <img class="section_4_02" src="/images/CustomPage/pizza/2.png" height="600" />
+            <img class="section_4_03" src="/images/CustomPage/pizza/3.png" height="600" />
+            <img class="section_4_04" src="/images/CustomPage/pizza/4.png" height="600" />
+        </div>
+    </section>
+    <div style="display: flex; justify-content: center;">
     <script src="/js/customBUG.js"></script>
-
+    <video loop muted autoplay class="CustomVid">
+        <source src="/video/CustomPizzaVID.mp4" type="video/mp4">
+    </video>
+    </div>
     <form method="post" action="@Url.Action("Create", "Custom")">
         <div style="display: flex; justify-content: center;">
-            <div class="container" style="background-color: rgba(255, 255, 255, 0.151); border-radius: 20px; box-shadow: 0 0 200px rgb(0, 0, 0);">
-                <div style="display: flex; align-items: flex-start;">
-                    <video loop muted autoplay style="width: 600px; height: auto; margin-right: 20px; margin-top: 4%;margin-bottom: 4%; border-radius: 20px;">
-                        <source src="/video/CustomPizzaVID.mp4" type="video/mp4">
-                    </video>
-                    <div style="margin-left: 40px; flex-grow: 1;">
-                        <hr>
-                        <div class="btn-group btn-group-vertical" data-toggle="buttons">
-                            <label class="btn">
-                                <input asp-for="TomatoSauce" type="checkbox"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span>TomatoSauce(+1$)</span>
-                            </label>
-                            <label class="btn">
-                                <input asp-for="Ham" type="checkbox"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span>Ham(+2$)</span>
-                            </label>
-                            <label class="btn">
-                                <input asp-for="Pepperoni" type="checkbox"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span>Pepperoni(+3$)</span>
-                            </label>
-                            <label class="btn">
-                                <input asp-for="Mushrooms" type="checkbox"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span>Mushrooms(+1$)</span>
-                            </label>
-                            <label class="btn">
-                                <input asp-for="Olives" type="checkbox"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span>Olives(+2$)</span>
-                            </label>
-                            <label class="btn">
-                                <input asp-for="Bacon" type="checkbox"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span>Bacon(+1$)</span>
-                            </label>
+            <div class="container">
+                <label class="CustomLabel">Toppings</label><br>
+                    <div class="form-group">
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" asp-for="Anchovies" id="topping10" class="checkbox">
+                            <label for="topping10" class="checkmark"></label>
+                            <span class="checkbox-text">ანჩოუსები</span>
                         </div>
-                        <div class="btn-group btn-group-vertical" data-toggle="buttons">
-                            <label class="btn">
-                                <input asp-for="Onions" type="checkbox"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span>Onions(+1$)</span>
-                            </label>
-                            <label class="btn">
-                                <input asp-for="GreenPeppers" type="checkbox"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span>GreenPeppers(+3$)</span>
-                            </label>
-                            <label class="btn">
-                                <input asp-for="Pineapple" type="checkbox"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span>Pineapple(+2$)</span>
-                            </label>
-                            <label class="btn">
-                                <input asp-for="Jalapenos" type="checkbox"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span>Jalapenos(+1$)</span>
-                            </label>
-                            <label class="btn">
-                                <input asp-for="Anchovies" type="checkbox"><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i> <span>Anchovies(+1$)</span>
-                            </label>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" asp-for="Bacon" id="topping6" class="checkbox">
+                            <label for="topping6" class="checkmark"></label>
+                            <span class="checkbox-text">ბეკონი</span>
                         </div>
-                        <label for="cheese-select" style="color:white; margin-left: 60px;font-size: 2rem;margin-top: 10px;">Choose Cheese:</label>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" asp-for="GreenPeppers" id="topping8" class="checkbox">
+                            <label for="topping8" class="checkmark"></label>
+                            <span class="checkbox-text">მწვანე წიწაკა</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" asp-for="Ham" id="topping2" class="checkbox">
+                            <label for="topping2" class="checkmark"></label>
+                            <span class="checkbox-text">ლორი</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" asp-for="Jalapenos" id="topping11" class="checkbox">
+                            <label for="topping11" class="checkmark"></label>
+                            <span class="checkbox-text">ჯალაპენოსი</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" asp-for="Mushrooms" id="topping4" class="checkbox">
+                            <label for="topping4" class="checkmark"></label>
+                            <span class="checkbox-text">სოკო</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" asp-for="Olives" id="topping5" class="checkbox">
+                            <label for="topping5" class="checkmark"></label>
+                            <span class="checkbox-text">ზეთისხილი</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" asp-for="Onions" id="topping7" class="checkbox">
+                            <label for="topping7" class="checkmark"></label>
+                            <span class="checkbox-text">ხახვი</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" asp-for="Pepperoni" id="topping3" class="checkbox">
+                            <label for="topping3" class="checkmark"></label>
+                            <span class="checkbox-text">პეპერონი</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" asp-for="Pineapple" id="topping9" class="checkbox">
+                            <label for="topping9" class="checkmark"></label>
+                            <span class="checkbox-text">ანანასი</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" asp-for="TomatoSauce" id="topping1" class="checkbox">
+                            <label for="topping1" class="checkmark"></label>
+                            <span class="checkbox-text">ტომატის სოუსი</span>
+                        </div>
+                        <br>
+                        <br>
+                        
+                        <label for="cheese-select" style="color: white; font-size: 2rem; margin-left: 60px; margin-top: 20px;">აირჩიე ყველი:</label>
                         <select id="cheese-select" name="cheesetype">
                             <option value="none">არა</option>
                             <option value="cheddar">Cheddar</option>
@@ -118,37 +149,25 @@
                             <option value="parmesan">Parmesan</option>
                             <option value="provolone">Provolone</option>
                             <option value="burrata">Burrata</option>
-                            <option value="sulguni">sulguni</option>
+                            <option value="sulguni">Sulguni</option>
                         </select>
                     </div>
                 </div>
             </div>
-            
-        </div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        
         <button type="submit">
             შეკვეთა
         </button>
-
     </form>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
 
 
     

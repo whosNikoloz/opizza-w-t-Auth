@@ -5,7 +5,7 @@
 }
 <html lang="en" dir="ltr">
 <head>
-    <link rel="stylesheet" href="/css/checkoutBUG.css">
+    <link rel="stylesheet" href="/css/checkoutV2.css">
     <link rel="stylesheet" href="/css/footerV3.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -73,9 +73,12 @@
             <p class="final-price">Საბოლოო ფასი: @Model.FinalPrice ₾</p>
             <form action="/Order/Create" method="post">
                 <input type="hidden" name="id" value="@Model.Id" />
-                <button type="submit" class="order-button">შეკვეთის დადასტურება</button>
-                <button asp-action="EditPizzaBUG" asp-controller="Custom" class="order-button">Edit</button>
+                <div class="button-container">
+                    <button type="submit" class="order-button">შეკვეთის დადასტურება</button>
+                    <button asp-action="EditPizzaBUG" asp-controller="Custom" class="order-button">Edit</button>
+                </div>
             </form>
+
         </div>
     </div>
    

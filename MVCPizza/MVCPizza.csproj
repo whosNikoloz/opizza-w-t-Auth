@@ -20,4 +20,11 @@
     <Folder Include="wwwroot\images\Pizzas\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="wwwroot\css\homeV2.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

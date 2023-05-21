@@ -4,7 +4,7 @@
 }
 <html lang="en" dir="ltr">
 <head>
-    <link rel="stylesheet" href="/css/pizzaBUG.css">
+    <link rel="stylesheet" href="/css/pizzaV3.css">
     <link rel="stylesheet" href="/css/footerV3.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
@@ -28,7 +28,8 @@
         <br />
         <br />
         <br />
-        <div class="row justify-content-center parent-container">
+        <div class="row justify-content-center">
+
             @foreach (var pizza in Model.Pizzas)
             {
                 <div class="card">
@@ -44,7 +45,7 @@
                         <p>@pizza.Description @pizza.FinalPrice₾</p>
                         <form asp-controller="Checkout" asp-action="Index" method="post">
                             <input type="hidden" name="id" value="@pizza.Id" />
-                            <button class="button-48" role="button" type="submit"> <span class="text"> Buy Now</span> </button>
+                            <button c role="button" type="submit"> <span class="text"> Buy Now</span> </button>
                         </form>
                     </div>
                 </div>

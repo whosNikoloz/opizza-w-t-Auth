@@ -7,7 +7,10 @@
     font-family: 'Lato', sans-serif;
     font-family: "Roboto", sans-serif;
 }
-
+body {
+    margin: 0;
+    padding: 0;
+}
 .wrapper {
     position: fixed;
     top: 0;
@@ -290,13 +293,32 @@ input[type="checkbox"] {
     margin: 35px;
     height: 80px;
 }
+@media (max-width: 1024px) {
+    .menu-btn {
+        right: 10px;
+        top: 10px;
+        height: 60px;
+        width: 60px;
+        font-size: 18px;
+    }
+}
 
-@media only screen and (max-width: 768px) {
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .menu-btn {
+        right: 10px;
+        top: 10px;
+        height: 50px;
+        width: 50px;
+        font-size: 16px;
+    }
     #logo {
         height: 60px; /* decrease height for smaller screens */
         margin: 15px; /* decrease margin for smaller screens */
     }
 }
+
+
 .link-class {
     padding: 5px; /* add padding to the link to create a smaller hover area */
     display: inline-block; /* make sure the link is displayed inline */

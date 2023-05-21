@@ -20,6 +20,10 @@ namespace MVCPizza.Controllers
             {
                 Custom.CheeseType = cheesetype;
             }
+            else
+            {
+                Custom.CheeseType = "none";
+            }
 
             decimal price = 4; // base pizza price
             Dictionary<string, int> ingredientPrices = new Dictionary<string, int>()

@@ -4,7 +4,7 @@
 }
 <html lang="en" dir="ltr">
 <head>
-    <link rel="stylesheet" href="/css/pizzaBUG.css">
+    <link rel="stylesheet" href="/css/pizzaV3.css">
     <link rel="stylesheet" href="/css/footerV3.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet">
     <script src="/js/site.js"></script>
@@ -19,7 +19,7 @@
 <body>
     <section data-aos="fade-up" data-aos-duration="1600">
         <div class="text-container">
-            <h1>ADMIN PANEL</h1>
+            <h1>ADMIN</h1>
         </div>
         <br />
         
@@ -39,7 +39,7 @@
                         <p>@pizza.Description @pizza.FinalPrice₾</p>
                         <form asp-controller="Admin" asp-action="Edit" method="get">
                             <input type="hidden" name="id" value="@pizza.Id" />
-                            <button class="button-48" role="button" > <span class="text"> Edit</span> </button>
+                            <button  role="button" > <span class="text"> Edit</span> </button>
                         </form>
                     </div>
                 </div>
@@ -53,12 +53,14 @@
     <br />
     <br />
     <br />
-    <section data-aos="fade-up" data-aos-duration="1600">
+    <section data-aos="fade-up" data-aos-duration="1600" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
         <h1 class="text-white">პიცის დამატება</h1>
         <br />
         <br />
-        <button class="button-32" role="button" type="submit" onclick="location.href='@Url.Action("AddPizza", "Admin")'"> <span class="text">დამატება</span></button>
+        <button class="button-38"  role="button" type="submit" onclick="location.href='@Url.Action("AddPizza", "Admin")'"> <span class="text">დამატება</span></button>
     </section>
+
+
 
     <footer class="footer-distributed">
 
