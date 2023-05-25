@@ -50,6 +50,7 @@ body {
     border-radius: 20px;
     transition: 0.5s;
     background-color: #003223 !important;
+    margin: 10px;
     border-color: #003223 !important;
 }
 
